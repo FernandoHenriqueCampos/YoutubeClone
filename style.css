@@ -131,6 +131,7 @@ main {
 
 .videosOptions {
     width: 100vw;
+    overflow-x: auto;
 
     ul {
         display: flex;
@@ -139,6 +140,7 @@ main {
         align-items: center;
         color: #AAAAAA;
         padding: 0 20px;
+        gap: 20px;
         list-style: none;
     }
 
@@ -147,7 +149,7 @@ main {
         padding: 10px 0;    
         cursor: pointer;
         font-weight: bold;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         
         &.active {
             color: #F1F1F1;
@@ -164,6 +166,10 @@ main {
             }
         }
     }
+
+    i {
+        padding-right: 15px;
+    }
 }
 
 .video {
@@ -172,6 +178,11 @@ main {
     width: 97%;
     height: auto;
     margin: 0 auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .videoInfo {
@@ -235,7 +246,7 @@ main {
     margin-bottom: 10vh;
 }
 
-footer {
+.Navbar {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -243,10 +254,6 @@ footer {
     width: 100%;
     border-top: 1px solid #AAAAAA;
     height: 8vh;
-
-    nav {
-        height: 100%;
-    }
 
     ul {
         list-style: none;
@@ -299,5 +306,312 @@ footer {
 
     .Desktop {
         display: flex;
+    }
+
+    .headerLeftSide {
+        padding-left: 15px;
+        gap: 30px;
+    }
+
+    .headerCenterSide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        i {
+            background-color: #2A2A2A;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .searchBar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: 1px solid #2A2A2A;
+        border-radius: 25px;
+        background-color: transparent;
+
+        input {
+            width: 500px;
+            height: 40px;
+            border: none;
+            border-radius: 25px;
+            background-color: transparent;
+            padding: 0 10px;
+
+            &::placeholder {
+                padding-left: 15px;
+                color: #AAAAAA;
+                font-size: 1rem;
+            }
+        }
+
+        i {
+            background-color: #2A2A2A;
+            width: 60px;
+            height: 40px;
+            border-radius: 0 25px 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .channelInfo {
+        .channelBanner {
+            width: 100%;
+            height: 25vh;
+        }
+
+        .channelInfoBellow {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 0 30px;
+
+            button {
+                width: 130px; 
+                justify-self: flex-end; 
+                position: absolute;
+                right: 30px;
+
+                transform: translateY(-5px);
+            }
+
+            .channelImage {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: #912DF5;
+                margin-top: 2vh;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            .channelInfo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0px;
+
+                transform: translateY(5px);
+
+                h1 {
+                    margin: 0;
+                }
+
+                span {
+                    color: #AAAAAA;
+                }
+            }
+        }
+    }
+
+    .videosOptions {
+        i {
+            padding: 0;
+        }
+    }
+
+    .Navbar {
+        top: 0;
+        background-color: #0F0F0F;
+        width: 60px;
+        height: 100vh;
+        align-items: center;
+        margin-top: 2.1vh;
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 6.5vh;
+        }
+
+        li {
+            width: 100%;
+            height: 5%;
+        }
+
+        li.Mobile {
+            display: none;
+        }
+    }
+
+    main.open {
+        margin-left: 60px;
+        width: calc(100vw - 60px);
+        overflow-x: hidden;
+    }
+
+    .videosOptions.open {
+        ul {
+            width: 90%;
+        }
+    }
+    
+    .desktopContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: auto;
+        width: calc(100% - 60px);
+        gap: 10px;
+    }
+
+    .featuredVideo {
+        width: 100%;
+        height: 15vh;
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 30px;
+        align-items: center;
+
+        .featuredThumb {
+            width: 30%;
+            height: 98%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+
+        .featuredDetails {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 10px;
+            height: 100%;
+            width: 40%;
+
+            h2 {
+                margin: 0;
+                font-size: 1.2rem;
+                height: 4rem;
+            }
+
+            .stats {
+                margin: 0;
+                height: 3rem;
+                font-size: 0.8rem;
+                color: #AAAAAA;
+            }
+
+            .description {
+                margin: 0;
+                height: 100%;
+                font-size: 1rem;
+                color: #F1F1F1;
+            }
+        }
+    }
+
+    .videoSectionTitle {
+        width: 90%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: 30px;
+        gap: 30px;
+        margin: 2vh 0;
+
+        h2 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        i {
+            color: #AAAAAA;
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            
+            span {
+                font-size: 0.8rem;
+            }
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .videoSection {
+        width: 100%;
+        height: 20vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 10px;
+        padding: 0 30px;
+
+        .DesktopVideo {
+
+            img {
+                width: 98%;
+                height: auto;
+                border-radius: 10px;
+                object-fit: contain;
+            }
+
+            .videoInfo {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding-left: 10px;
+                width: 100%;
+
+                h1 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                    height: 4rem;
+                }
+
+                span {
+                    color: #AAAAAA;
+                }
+
+                p {
+                    color: #AAAAAA;
+                }
+            }
+        }
+    }
+
+    .videoSection.Last {
+        margin-bottom: 4vh;
     }
 }

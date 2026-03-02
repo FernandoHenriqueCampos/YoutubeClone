@@ -23,20 +23,26 @@
         </div> 
 
         <div class="headerLeftSide Desktop">
-            <i class="bi bi-list"></i>
-            <i class="bi bi-youtube" style="color:red"><span style="color:white">YouTube</span></i>
+            <i class="bi bi-list" style="font-size: 24px;" onclick="openMenu()"></i>
+            <img src="./Assets/Logo.png" alt="Youtube">
         </div>
 
         <div class="headerCenterSide Desktop">
-            
+            <div class="searchBar">
+                <input type="text" placeholder="Search">
+                <i class="bi bi-search"></i>
+            </div>
+            <i class="bi bi-mic"></i>
         </div>
         
         <div class="headerRightSide Desktop">
-            
+            <i class="bi bi-display"></i>
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-person"></i>
         </div>
     </header>
-    <main>
-        <section class="channelInfo Mobile">
+    <main id="main" class="open">
+        <section class="channelInfo">
             <div class="channelBanner">
                 <img src="./Assets/banner.jpg" alt="Banner do Canal">
             </div>
@@ -44,8 +50,13 @@
                 <div class="channelImage">
                     <img src="./Assets/profile.jpg" alt="Imagem do Canal">
                 </div>
-                <h1>MrBeast</h1>
-                <div class="channelDescription">
+                <div class="channelInfo">
+                    <h1>MrBeast</h1>
+                    <div class="channelStats Desktop">
+                        <span>100M subscribers</span>
+                    </div>
+                </div>
+                <div class="channelDescription Mobile">
                     <span>SUBSCRIBE FOR A COOKIE! New MrBeast or MrBeast Gaming video every single Saturday at noon eastern time!</span>
                     <i class="bi bi-chevron-right"></i>
                 </div>
@@ -54,18 +65,38 @@
         </section>
 
         <section class="videosContainer">
-            <nav class="videosOptions">
+            <nav class="videosOptions" id="navFilterVideo">
                 <ul>
                     <li class="active">HOME</li>
                     <li>VIDEOS</li>
                     <li>SHORTS</li>
-                    <li>LIVE</li>
                     <li>PLAYLISTS</li>
+                    <li>COMMUNITY</li>
+                    <li>STORE</li>
+                    <li>CHANNELS</li>
+                    <li>ABOUT</li>
+                    <li><i class="bi bi-search"></i></li>
                 </ul>
             </nav>
-            <div class="videosList">
+            <div class="videosList Mobile">
 
                 <div class="video">
+                    <img src="./Assets/thumb.jpeg" alt="Video">
+                    <div class="videoInfo">
+                        <img src="./Assets/profile.jpg" alt="">
+                        <div class="videoText">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <div class="videoStats">
+                                <span>MrBeast</span>
+                                <span>10M views</span>
+                                <p>2 days ago</p>
+                            </div>
+                        </div>
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </div>
+                </div>
+
+                 <div class="video">
                     <img src="./Assets/thumb.jpg" alt="Video">
                     <div class="videoInfo">
                         <img src="./Assets/profile.jpg" alt="">
@@ -81,52 +112,121 @@
                     </div>
                 </div>
 
-                <div class="video">
-                    <img src="./Assets/thumb.jpg" alt="Video">
-                    <div class="videoInfo">
-                        <img src="./Assets/profile.jpg" alt="">
-                        <div class="videoText">
-                            <h1>$1 vs $10,000,000 Job!</h1>
-                            <div class="videoStats">
-                                <span>MrBeast</span>
-                                <span>10M views</span>
-                                <p>2 days ago</p>
-                            </div>
-                        </div>
-                        <i class="bi bi-three-dots-vertical"></i>
+            </div>    
+            
+            <section id="desktopContent" class="desktopContent Desktop">
+                <div class="featuredVideo">
+                    <div class="featuredThumb">
+                        <img src="./Assets/thumb.jpeg" alt="Featured">
+                    </div>
+                    <div class="featuredDetails">
+                        <h2>Featured Video Title here</h2>
+                        <p class="stats">12,216,741 views • 1 week ago</p>
+                        <p class="description">A BRAND NEW segment + Get Crafty, Wheel Unfortunate & Top 10... another amazing OT!</p>
                     </div>
                 </div>
 
-                <div class="video">
-                    <img src="./Assets/thumb.jpg" alt="Video">
-                    <div class="videoInfo">
-                        <img src="./Assets/profile.jpg" alt="">
-                        <div class="videoText">
-                            <h1>$1 vs $10,000,000 Job!</h1>
-                            <div class="videoStats">
-                                <span>MrBeast</span>
-                                <span>10M views</span>
-                                <p>2 days ago</p>
-                            </div>
-                        </div>
-                        <i class="bi bi-three-dots-vertical"></i>
-                    </div>
+                <div class="videoSectionTitle">
+                    <h2>Latest Videos!</h2>
+                    <i class="bi bi-play-fill"><span>Play All</span></i>
                 </div>
 
-            </div>       
+                <div class="videoSection">
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>Video title here</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+                  
+                </div>
+
+                <div class="videoSectionTitle">
+                    <h2>Most Popular Videos!</h2>
+                    <i class="bi bi-play-fill"><span>Play All</span></i>
+                </div>
+
+                <div class="videoSection Last">
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+
+                    <div class="DesktopVideo">
+                        <img src="./Assets/thumb.jpeg" alt="">
+                        <div class="videoInfo">
+                            <h1>$1 vs $10,000,000 Job!</h1>
+                            <span>MrBeast</span>
+                            <p>12M views • 2 days ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
     </main>
 
-    <footer>
-        <nav>
-            <ul>
-                <li><i class="bi bi-house-fill"></i><span>Home</span></li>
-                <li><i class="bi bi-search"></i><span>Shorts</span></li>
-                <li><i class="bi bi-plus-circle"></i></li>
-                <li><i class="bi bi-bell"></i><span>Subscriptions</span></li>
-                <li><i class="bi bi-person"></i><span>You</span></li>
-            </ul>
-        </nav>
-    </footer>
+
+    <nav class="Navbar" id="menu">
+        <ul>
+            <li><i class="bi bi-house-fill"></i><span>Home</span></li>
+            <li><i class="bi bi-search"></i><span>Shorts</span></li>
+            <li class="Mobile"><i class="bi bi-plus-circle Mobile"></i></li>
+            <li><i class="bi bi-bell"></i><span>Subscriptions</span></li>
+            <li><i class="bi bi-person"></i><span>You</span></li>
+        </ul>
+    </nav>
 </body>
+<script src="script.js"></script>
 </html>
