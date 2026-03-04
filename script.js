@@ -4,6 +4,7 @@ function openMenu() {
     const menu = document.getElementById("menu");
     const main = document.getElementById("main");
     const navFilterVideo = document.getElementById("navFilterVideo");
+    const menuLarge = document.getElementById("menuLarge");
 
     if (window.innerWidth <= 768) {
         menu.style.display = "block";
@@ -14,13 +15,15 @@ function openMenu() {
         menu.classList.remove("open");
         main.classList.remove("open");
         navFilterVideo.classList.remove("open");
-        menu.style.display = "none";
+        menu.style.display = "flex";
+        menuLarge.style.display = "none";
         isOpen = false;
     } else {
         menu.classList.add("open");
         main.classList.add("open");
         navFilterVideo.classList.add("open");
-        menu.style.display = "flex";
+        menuLarge.style.display = "flex";
+        menu.style.display = "none";
         isOpen = true;
     }
 }
@@ -126,3 +129,36 @@ function renderVideos() {
 
 renderVideos();
 window.addEventListener('resize', renderVideos);
+
+const modal = document.getElementById("modal");
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+function openModal() {
+    const modal = document.getElementById("modal");
+    modal.classList.remove("hide");
+    document.body.style.overflow = "hidden";
+    modal.showModal();
+}
+
+function closeModal() {
+    const modal = document.getElementById("modal");
+    
+    modal.classList.add("hide");
+
+    setTimeout(() => {
+        modal.close();
+        document.body.style.overflow = "auto";
+    }, 300); 
+}
+
+modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+

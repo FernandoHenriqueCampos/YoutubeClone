@@ -21,7 +21,7 @@
         <div class="headerRightSide Mobile">
             <button aria-label="Transmitir" class="icon-button"><i class="bi bi-display"></i></button>
             <button aria-label="Pesquisar" class="icon-button"><i class="bi bi-search"></i></button>
-            <button aria-label="Mais opções" class="icon-button"><i class="bi bi-three-dots-vertical"></i></button>
+            <button aria-label="Mais opções" class="icon-button" onclick="openModal()"><i class="bi bi-three-dots-vertical"></i></button>
         </div> 
 
         <div class="headerLeftSide Desktop">
@@ -150,6 +150,91 @@
             <li tabindex="0"><i class="bi bi-person" aria-hidden="true"></i><span>Você</span></li>
         </ul>
     </nav>
+
+    <nav class="LargeNavbar Desktop" id="menuLarge">
+        <div class="PatternSelection">
+            <ul>
+                <li tabindex="0"><i class="bi bi-house-fill active" aria-hidden="true"></i><span>Início</span></li>
+                <li tabindex="0"><i class="bi bi-search" aria-hidden="true"></i><span>Shorts</span></li>
+            </ul>
+        </div>
+        <div class="Subscriptions menuContainer">
+            <div class="SubscriptionsTitle">
+                <h1>Inscrições</h1>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+            <ul>
+                <div class="channelSubs">
+                    <div class="channelImageSubs">
+                        <img src="" alt="">
+                    </div>
+                    <p>Channel Name</p>
+                </div>
+            </ul>
+        </div>
+        <div class="UserConfigs menuContainer">
+            <div class="UserConfigsTitle">
+                <h1>Você</h1>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+            <ul>
+                <li tabindex="0"><i class="bi bi-clock-history" aria-hidden="true"></i><span>Histórico</span></li>
+                <li tabindex="0"><i class="bi bi-list-nested" aria-hidden="true"></i><span>Playlists</span></li>
+                <li tabindex="0"><i class="bi bi-clock" aria-hidden="true"></i><span>Assistir mais tarde</span></li>
+                <li tabindex="0"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i><span>Vídeos curtidos</span></li>
+                <li tabindex="0"><i class="bi bi-download" aria-hidden="true"></i><span>Downloads</span></li>
+            </ul>
+        </div>
+        <div class="Explore menuContainer">
+            <div class="ExploreTitle">
+                <h1>Explorar</h1>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+            <ul>
+                <li tabindex="0"><i class="bi bi-music-note" aria-hidden="true"></i><span>Música</span></li>
+                <li tabindex="0"><i class="bi bi-controller" aria-hidden="true"></i><span>Jogos</span></li>
+                <li tabindex="0"><i class="bi bi-newspaper" aria-hidden="true"></i><span>Notícias</span></li>
+                <li tabindex="0"><i class="bi bi-chevron-down" aria-hidden="true"></i><span>Mostrar mais</span></li>
+            </ul>
+        </div>
+        <div class="Settings menuContainer">
+            <div class="SettingsTitle">
+                <h1>Configurações</h1>
+                <i class="bi bi-chevron-right"></i>
+            </div>
+            <ul>
+                <li tabindex="0"><i class="bi bi-gear" aria-hidden="true"></i><span>Configurações</span></li>
+                <li tabindex="0"><i class="bi bi-flag" aria-hidden="true"></i><span>Histórico de Denúncias</span></li>
+                <li tabindex="0"><i class="bi bi-question-circle" aria-hidden="true"></i><span>Ajuda</span></li>
+                <li tabindex="0"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i><span>Enviar feedback</span></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>Sobre</p>
+            <p>Imprensa</p>
+            <p>Direitos autorais</p>
+            <p>Entre em contato</p>
+            <p>Criadores de conteúdo</p>
+            <p>Publicidade</p>
+            <p>Desenvolvedores</p>
+            <p>Termos</p>
+            <p>Privacidade</p>
+            <p>Política e segurança</p>
+            <p>Como funciona o YouTube</p>
+            <p>Teste novos recursos</p>
+            <p>© 2026 Google LLC</p>
+        </div>
+    </nav>
+
+    <dialog id="modal" class="Mobile">
+        <div class="modal-content">
+            <div class="button" onclick="alertTeste()"><i class="bi bi-share"></i><span>Compartilhar</span></div>
+            <div class="button"><i class="bi bi-info-circle"></i><span>Sobre o canal</span></div>
+            <div class="button"><i class="bi bi-ban"></i><span>Ocultar o usuário</span></div>
+            <div class="button"><i class="bi bi-flag"></i><span>Denunciar usuário</span></div>
+            <div class="button"><i class="bi bi-question-circle"></i><span>Ajuda e feedback</span></div>
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
